@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     libcairo2-dev \
     libffi-dev \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
@@ -29,4 +30,4 @@ ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
 # Command to run the application
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8001"]

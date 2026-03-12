@@ -927,6 +927,7 @@ const BlogPage = () => {
                   </div>
                 </Link>
               </div>
+              )
             })}
           </div>
         )}

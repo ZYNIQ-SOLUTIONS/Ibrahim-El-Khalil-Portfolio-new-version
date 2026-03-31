@@ -18,7 +18,7 @@ const fetchAIInstructions = async () => {
   }
 
   try {
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
     const response = await fetch(`${backendUrl}/api/ai-instructions`);
     if (response.ok) {
       const data = await response.json();
@@ -66,7 +66,7 @@ export const streamChatMessage = async (message, onChunk) => {
   // Use backend API endpoint instead of direct Gemini API call
   // This ensures we use the Mem0 integration and don't expose API keys in frontend
   try {
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
     const response = await fetch(`${backendUrl}/api/ai/chat`, {
       method: 'POST',
       headers: {

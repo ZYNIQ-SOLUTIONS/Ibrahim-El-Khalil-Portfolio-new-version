@@ -1,6 +1,6 @@
 import { PROFILE_DATA, SOCIAL_LINKS, EXPERIENCE_DATA, EDUCATION_DATA, SKILLS_DATA, VENTURES_DATA, OTHER_ACHIEVEMENTS_DATA, WHITE_PAPERS_DATA } from '../constants';
 
-const API_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+const API_URL = process.env.REACT_APP_BACKEND_URL || '';
 
 // Helper to get auth headers
 const getAuthHeaders = () => {

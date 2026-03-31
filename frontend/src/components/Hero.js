@@ -144,7 +144,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={async () => {
-                  const base = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001');
+                  const base = (process.env.REACT_APP_BACKEND_URL || '');
                   const endpoint = `${base}/api/generate_ats_resume`;
                   try {
                     const res = await fetch(endpoint, { 

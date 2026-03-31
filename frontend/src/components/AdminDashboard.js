@@ -49,7 +49,7 @@ const AdminDashboard = () => {
 
     try {
       // Validate password with backend
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
       const response = await fetch(`${backendUrl}/api/admin/validate-password`, {
         method: 'POST',
         headers: {
@@ -1143,7 +1143,7 @@ const ChangePasswordModal = ({ onClose }) => {
 
     setLoading(true);
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
       const response = await fetch(`${backendUrl}/api/admin/change-password`, {
         method: 'POST',
         headers: {
@@ -2442,7 +2442,7 @@ const ThemeSection = ({ showMessage }) => {
   const loadTheme = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001'}/api/theme`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || ''}/api/theme`);
       if (response.ok) {
         const data = await response.json();
         if (data) {
@@ -2479,7 +2479,7 @@ const ThemeSection = ({ showMessage }) => {
   const handleSave = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001'}/api/theme`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || ''}/api/theme`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -2976,7 +2976,7 @@ const AIInstructionsSection = ({ aiInstructions, setAiInstructions, showMessage 
   const loadAIInstructions = async () => {
     setLoading(true);
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
       console.log('Loading AI instructions from:', `${backendUrl}/api/ai-instructions`);
       console.log('REACT_APP_BACKEND_URL:', process.env.REACT_APP_BACKEND_URL);
       const response = await fetch(`${backendUrl}/api/ai-instructions`);
@@ -3005,7 +3005,7 @@ const AIInstructionsSection = ({ aiInstructions, setAiInstructions, showMessage 
   const handleSave = async () => {
     setLoading(true);
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
       const response = await fetch(`${backendUrl}/api/ai-instructions`, {
         method: 'PUT',
         headers: { 
@@ -3761,7 +3761,7 @@ const AIResumeGenerator = () => {
 
     setIsGenerating(true);
     try {
-      const base = (process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001');
+      const base = (process.env.REACT_APP_BACKEND_URL || '');
       const endpoint = `${base}/api/generate_ats_resume`;
       
       const res = await fetch(endpoint, {

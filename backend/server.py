@@ -27,17 +27,13 @@ except Exception:
     HAS_REPORTLAB = False
 
 
-from auth import verify_token, init_keycloak
+from auth import get_current_user
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 security = HTTPBearer()
 
-def verify_admin_auth(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    try:
-        user_info = verify_token(credentials.credentials)
-        return user_info
-    except Exception as e:
-        raise HTTPException(status_code=401, detail=str(e))
+def verify_admin_auth(user: dict = Depends(get_current_user)):
+    return user
 
 import requests
 def generate_content_with_olla(prompt, system_instruction="You are a helpful assistant.", model="qwen2.5-coder"):

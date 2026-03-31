@@ -1,0 +1,220 @@
+/* ============================================================
+   ZYNIQ Design Tokens — z-tokens.css v2.0.0
+   Single source of truth for ALL CSS custom properties.
+   ============================================================ */
+
+:root {
+  /* ── Brand ─────────────────────────────────────────────── */
+  --z-brand-red:    #EA2323;
+  --z-brand-black:  #050505;
+  --z-brand-white:  #FFFFFF;
+  --z-brand-void:   #000000;
+
+  /* ── Surfaces (dark-first) ─────────────────────────────── */
+  --z-surface-primary:   #0a0808;
+  --z-surface-secondary: #0f0f12;
+  --z-surface-tertiary:  #141418;
+  --z-surface-elevated:  #18181b;
+  --z-surface-card:      #1a1111;
+  --z-surface-deep:      #0d0909;
+  --z-surface-hover:     #2a1818;
+
+  /* ── Text ──────────────────────────────────────────────── */
+  --z-text-primary:   #FFFFFF;
+  --z-text-secondary: #a1a1aa;
+  --z-text-muted:     #71717a;
+  --z-text-inverse:   #050505;
+  --z-text-accent:    #EA2323;
+  --z-text-link:      #EA2323;
+  --z-text-heading:   #e4e4e7;
+  --z-text-heading-sub: #d4d4d8;
+
+  /* ── Borders ───────────────────────────────────────────── */
+  --z-border-default: rgba(255,255,255,0.08);
+  --z-border-subtle:  rgba(255,255,255,0.04);
+  --z-border-strong:  rgba(255,255,255,0.16);
+  --z-border-accent:  rgba(234,35,35,0.30);
+
+  /* ── Glass ─────────────────────────────────────────────── */
+  --z-glass-light:     rgba(255,255,255,0.05);
+  --z-glass-medium:    rgba(255,255,255,0.10);
+  --z-glass-heavy:     rgba(255,255,255,0.15);
+  --z-glass-red:       rgba(234,35,35,0.10);
+  --z-glass-red-heavy: rgba(234,35,35,0.20);
+
+  /* ── Severity ──────────────────────────────────────────── */
+  --z-severity-critical: #ef4444;
+  --z-severity-high:     #f97316;
+  --z-severity-medium:   #eab308;
+  --z-severity-low:      #22c55e;
+  --z-severity-info:     #3b82f6;
+
+  /* ── Risk ──────────────────────────────────────────────── */
+  --z-risk-critical: #dc2626;
+  --z-risk-high:     #ea580c;
+  --z-risk-medium:   #ca8a04;
+  --z-risk-low:      #16a34a;
+  --z-risk-none:     #6b7280;
+
+  /* ── Gray Scale ────────────────────────────────────────── */
+  --z-gray-50:  #fafafa;
+  --z-gray-100: #f4f4f5;
+  --z-gray-200: #e4e4e7;
+  --z-gray-300: #d4d4d8;
+  --z-gray-400: #a1a1aa;
+  --z-gray-500: #71717a;
+  --z-gray-600: #52525b;
+  --z-gray-700: #3f3f46;
+  --z-gray-800: #27272a;
+  --z-gray-900: #18181b;
+
+  /* ── Fonts ─────────────────────────────────────────────── */
+  --z-font-heading: 'Orbitron', sans-serif;
+  --z-font-display: 'Space Grotesk', sans-serif;
+  --z-font-body:    'Inter', system-ui, sans-serif;
+  --z-font-code:    'JetBrains Mono', 'Roboto Mono', monospace;
+  --z-font-mono:    'Roboto Mono', monospace;
+
+  /* ── Spacing (4px base) ────────────────────────────────── */
+  --z-space-1:  0.25rem;
+  --z-space-2:  0.5rem;
+  --z-space-3:  0.75rem;
+  --z-space-4:  1rem;
+  --z-space-5:  1.25rem;
+  --z-space-6:  1.5rem;
+  --z-space-8:  2rem;
+  --z-space-10: 2.5rem;
+  --z-space-12: 3rem;
+  --z-space-16: 4rem;
+  --z-space-20: 5rem;
+
+  /* ── Radii ─────────────────────────────────────────────── */
+  --z-radius-sm:   0.25rem;
+  --z-radius-md:   0.5rem;
+  --z-radius-lg:   0.75rem;
+  --z-radius-xl:   1rem;
+  --z-radius-2xl:  1.5rem;
+  --z-radius-full: 9999px;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --z-shadow-sm:   0 1px 2px rgba(0,0,0,0.4);
+  --z-shadow-md:   0 4px 6px rgba(0,0,0,0.5);
+  --z-shadow-lg:   0 10px 15px rgba(0,0,0,0.6);
+  --z-shadow-xl:   0 20px 25px rgba(0,0,0,0.7);
+  --z-shadow-glow: 0 0 20px rgba(234,35,35,0.3);
+  --z-shadow-glow-strong: 0 0 40px rgba(234,35,35,0.5);
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --z-transition-fast:   150ms cubic-bezier(0.4,0,0.2,1);
+  --z-transition-normal: 250ms cubic-bezier(0.4,0,0.2,1);
+  --z-transition-slow:   400ms cubic-bezier(0.4,0,0.2,1);
+  --z-transition-spring: 600ms cubic-bezier(0.16,1,0.3,1);
+
+  /* ── Z-index ───────────────────────────────────────────── */
+  --z-index-dropdown: 1000;
+  --z-index-sticky:   1020;
+  --z-index-fixed:    1030;
+  --z-index-backdrop: 1040;
+  --z-index-modal:    1050;
+  --z-index-popover:  1060;
+  --z-index-tooltip:  1070;
+  --z-index-toast:    1080;
+
+  /* ── Typography Scale ──────────────────────────────────── */
+  --z-text-xs:   0.75rem;
+  --z-text-sm:   0.875rem;
+  --z-text-base: 1rem;
+  --z-text-lg:   1.125rem;
+  --z-text-xl:   1.25rem;
+  --z-text-2xl:  1.5rem;
+  --z-text-3xl:  1.875rem;
+  --z-text-4xl:  2.25rem;
+  --z-text-5xl:  3rem;
+}
+
+/* ── Light theme overrides ─────────────────────────────── */
+[data-theme="light"] {
+  --z-surface-primary:   #FFFFFF;
+  --z-surface-secondary: #f8fafc;
+  --z-surface-tertiary:  #f1f5f9;
+  --z-surface-elevated:  #FFFFFF;
+  --z-surface-card:      #FFFFFF;
+  --z-surface-deep:      #f8fafc;
+  --z-surface-hover:     #fef2f2;
+
+  --z-text-primary:   #050505;
+  --z-text-secondary: #52525b;
+  --z-text-muted:     #a1a1aa;
+  --z-text-inverse:   #FFFFFF;
+  --z-text-heading:   #111111;
+  --z-text-heading-sub: #27272a;
+
+  --z-border-default: rgba(0,0,0,0.08);
+  --z-border-subtle:  rgba(0,0,0,0.04);
+  --z-border-strong:  rgba(0,0,0,0.16);
+
+  --z-shadow-sm:   0 1px 2px rgba(0,0,0,0.05);
+  --z-shadow-md:   0 4px 6px rgba(0,0,0,0.07);
+  --z-shadow-lg:   0 10px 15px rgba(0,0,0,0.10);
+  --z-shadow-xl:   0 20px 25px rgba(0,0,0,0.15);
+}
+
+/* ── Backward Compatibility Aliases ──────────────────────
+   Maps old variable names to new z-* tokens so
+   existing code keeps working without changes.
+   ────────────────────────────────────────────────────── */
+:root {
+  /* Legacy zyniq-* aliases */
+  --zyniq-red:    var(--z-brand-red);
+  --zyniq-black:  var(--z-brand-black);
+  --zyniq-white:  var(--z-brand-white);
+  --zyniq-void:   var(--z-brand-void);
+
+  /* Legacy surface-* aliases */
+  --surface-primary:   var(--z-surface-primary);
+  --surface-secondary: var(--z-surface-secondary);
+  --surface-tertiary:  var(--z-surface-tertiary);
+  --surface-elevated:  var(--z-surface-elevated);
+  --surface-card:      var(--z-surface-card);
+  --surface-deep:      var(--z-surface-deep);
+  --surface-hover:     var(--z-surface-hover);
+
+  /* Legacy glass-* aliases */
+  --glass-light:     var(--z-glass-light);
+  --glass-medium:    var(--z-glass-medium);
+  --glass-heavy:     var(--z-glass-heavy);
+  --glass-red:       var(--z-glass-red);
+  --glass-red-heavy: var(--z-glass-red-heavy);
+
+  /* Legacy severity / risk */
+  --severity-critical: var(--z-severity-critical);
+  --severity-high:     var(--z-severity-high);
+  --severity-medium:   var(--z-severity-medium);
+  --severity-low:      var(--z-severity-low);
+  --severity-info:     var(--z-severity-info);
+
+  --risk-critical: var(--z-risk-critical);
+  --risk-high:     var(--z-risk-high);
+  --risk-medium:   var(--z-risk-medium);
+  --risk-low:      var(--z-risk-low);
+  --risk-none:     var(--z-risk-none);
+
+  /* Legacy gray-* */
+  --gray-50:  var(--z-gray-50);
+  --gray-100: var(--z-gray-100);
+  --gray-200: var(--z-gray-200);
+  --gray-300: var(--z-gray-300);
+  --gray-400: var(--z-gray-400);
+  --gray-500: var(--z-gray-500);
+  --gray-600: var(--z-gray-600);
+  --gray-700: var(--z-gray-700);
+  --gray-800: var(--z-gray-800);
+  --gray-900: var(--z-gray-900);
+
+  /* Legacy font aliases */
+  --font-heading: var(--z-font-heading);
+  --font-display: var(--z-font-display);
+  --font-body:    var(--z-font-body);
+  --font-code:    var(--z-font-code);
+  --font-mono:    var(--z-font-mono);
+}

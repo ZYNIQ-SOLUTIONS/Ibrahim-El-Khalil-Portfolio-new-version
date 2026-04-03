@@ -22,47 +22,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
--e 
 # Environment files
 *.env
 *.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
+
+# ── Terminal Artifact Guard ───────────────────────────────────
+# Prevent accidental commits of files created by terminal
+# commands that were mistakenly interpreted as filenames.
+*\ *
+*\|*
+*\t*
+*--format*
+*grep*
+-la
+-e
